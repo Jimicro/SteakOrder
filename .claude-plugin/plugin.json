@@ -1,0 +1,12 @@
+{
+  "name": "steakorder",
+  "version": "0.1.0",
+  "description": "Adaptive requirements-elicitation gate. Asks one adaptive question at a time, screens every answer through four quality gates, and produces an ISO/IEC/IEEE 29148 Software Requirements Specification. Also regenerates a clean SRS from an existing requirements document.",
+  "author": {
+    "name": "Jimicro"
+  },
+  "homepage": "https://github.com/Jimicro/SteakOrder",
+  "repository": "https://github.com/Jimicro/SteakOrder",
+  "license": "MIT",
+  "keywords": ["requirements", "srs", "elicitation", "iso-29148", "specification", "requirements-engineering", "analysis", "gate", "steakorder"]
+}
