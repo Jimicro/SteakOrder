@@ -1,0 +1,21 @@
+{
+  "name": "steakorder",
+  "metadata": {
+    "description": "Turns vague build requests into an ISO/IEC/IEEE 29148 SRS, one adaptive question at a time."
+  },
+  "owner": {
+    "name": "Jimicro"
+  },
+  "plugins": [
+    {
+      "name": "steakorder",
+      "description": "Stop before building. Ask one adaptive question at a time, screen each answer through four quality gates, and produce an ISO/IEC/IEEE 29148 Software Requirements Specification — or regenerate a clean SRS from an existing document.",
+      "author": {
+        "name": "Jimicro"
+      },
+      "source": "./",
+      "category": "productivity",
+      "homepage": "https://github.com/Jimicro/SteakOrder"
+    }
+  ]
+}
