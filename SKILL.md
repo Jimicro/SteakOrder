@@ -73,7 +73,7 @@ Two phases. Cover every area; reorder adaptively if an answer pulls a later one 
 12. **User interface** — If the system has a UI, elicit it as first-class, not scattered through functional requirements: the screen/window inventory (each distinct view), the key elements per screen (fields, controls, lists, status indicators), navigation and transitions between them, and display rules (what is shown when, formatting, color/state coding). Pull UI behaviour already surfaced in functional answers into this view rather than re-asking. As you list each screen element, tie it to a functional requirement — if an element (a status indicator, a counter, a control) has no requirement behind it, either add the requirement or drop the element then and there, so no orphan UI reaches the document. Skip this whole area only if the system genuinely has no UI (a headless script or service) — confirm that with the user rather than assuming.
 13. **Diagram inputs** — Actively gather what each SRS diagram needs, so they render with real content, not stubs.
     - *ACD*: every external actor and system, and for each boundary, the exact data/control that crosses it and its direction (in/out). Pull candidates from stakeholders (area 2) and interfaces (area 11), then ask for any boundary not yet pinned down — an external system named without its exchanged data isn't drawable yet.
-    - *Use-case diagram*: each actor and the use cases they invoke; flag any actor with no use case, or any major function with no actor, and ask which it is.
+    - *Use-case diagram*: each **primary actor** (the people who use the system) and the use cases they invoke; plus each **supporting (secondary) actor** — an external system that helps fulfil a use case (a login provider, map API, push service, payment gateway) — placed to the side and linked to the use cases it participates in. Pull supporting actors from the external systems already named for the ACD (area 11). Flag any actor with no use case, or any major function with no actor, and ask which it is.
     Drill any boundary or actor that is named but not yet specified enough to draw.
 
 Phase 2 areas 9–13 are mandatory before termination. If the build is trivial (a one-off script with no NFRs worth stating), it is acceptable to confirm with the user that a given area is "not applicable" rather than invent requirements — but that is the user's call to make, asked explicitly, not an assumption.
@@ -174,7 +174,9 @@ Only once this pass is clean do you write the document. Use this structure:
 ## 4. Diagrams
    - Architecture Context Diagram (ACD): the system as one box with external
      actors/systems and the data crossing each boundary.
-   - Use-case diagram: actors and their use cases.
+   - Use-case diagram: primary actors (people) and their use cases, plus
+     supporting (secondary) actors — external systems that help fulfil a use
+     case — drawn to the side and linked to the use cases they participate in.
    Render these with Mermaid. (Class/sequence diagrams belong to design (SDD),
    not the SRS — leave them out.) If a diagram can't be drawn yet for lack of
    input, list it as a required artifact still to be produced.
